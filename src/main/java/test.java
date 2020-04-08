@@ -1,32 +1,75 @@
-import org.antlr.v4.runtime.CharStreams;
-import org.antlr.v4.runtime.CodePointCharStream;
+import java.io.IOException;
+import java.util.Arrays;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+
+import org.antlr.v4.gui.TreeViewer;
+import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.tree.ParseTree;
+import org.antlr.v4.runtime.tree.*;
+import org.apache.commons.io.IOUtils;
+
 
 public class test {
 
-    public static void run(String expr) throws Exception {
+    public static  String getFile(String fileName){
+        String result = "";
 
-        //对每一个输入的字符串，构造一个 CodePointCharStream
-        CodePointCharStream cpcs = CharStreams.fromString(expr);
+        ClassLoader classLoader = test.class.getClassLoader();
+        try {
+            result = IOUtils.toString(classLoader.getResourceAsStream(fileName));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-        //用 cpcs 构造词法分析器 lexer，词法分析的作用是产生记号
-        frameLexer lexer = new frameLexer(cpcs);
+        return result;
 
-        //用词法分析器 lexer 构造一个记号流 tokens
-        CommonTokenStream tokens = new CommonTokenStream(lexer);
-
-        //再使用 tokens 构造语法分析器 parser,至此已经完成词法分析和语法分析的准备工作
-        frameParser parser = new frameParser(tokens);
-
-        //最终调用语法分析器的规则 prog，完成对表达式的验证
-        //frameParser.ProgContext pcontext = parser.prog();
-
-        // 通过访问者模式，执行我们的程序
-        //EvalVisitor evalVisitor = new EvalVisitor();
-        //evalVisitor.visit(pcontext);
     }
+
 
     public static void main(String[] args) throws Exception {
-        run("a=5\nb=3\nc=a*b+3\nc*c\n");
+        // create a CharStream that reads from standard input
+        ANTLRInputStream input = new ANTLRInputStream(test.getFile("example.sol"));
+        // create a lexer that feeds off of input CharStream
+        frameLexer lexer = new frameLexer(input);
+        // create a buffer of tokens pulled from the lexer
+        CommonTokenStream tokens = new CommonTokenStream(lexer);
+        // create a parser that feeds off the tokens buffer
+        frameParser parser = new frameParser(tokens);
+        //PropertyFilePrinter parser= new PropertyFilePrinter(tokens);
+        MyListener underlineListener = new MyListener();
+        parser.removeErrorListeners(); // remove ConsoleErrorListener
+        parser.addErrorListener(underlineListener); // add ours
+
+        ParseTree tree = parser.sourceUnit(); // begin parsing at init rule
+        //
+
+        System.out.println(tree.toStringTree(parser)); // print LISP-style tree
+
+
+
+        //show AST in GUI
+        JFrame frame = new JFrame("Antlr AST");
+        JPanel panel = new JPanel();
+        TreeViewer viewr = new TreeViewer(Arrays.asList(
+                parser.getRuleNames()),tree);
+        viewr.setScale(0.8);//scale a little
+        panel.add(viewr);
+
+        JScrollPane scrollPane = new JScrollPane(panel);
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+
+        frame.add(scrollPane);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(700,700);
+        frame.setVisible(true);
+
+
+
     }
+
 }
