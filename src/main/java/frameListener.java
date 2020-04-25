@@ -557,15 +557,305 @@ public interface frameListener extends ParseTreeListener {
 	 */
 	void exitElementaryTypeName(frameParser.ElementaryTypeNameContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link frameParser#expression}.
+	 * Enter a parse tree produced by the {@code yuyu}
+	 * labeled alternative in {@link frameParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpression(frameParser.ExpressionContext ctx);
+	void enterYuyu(frameParser.YuyuContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link frameParser#expression}.
+	 * Exit a parse tree produced by the {@code yuyu}
+	 * labeled alternative in {@link frameParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpression(frameParser.ExpressionContext ctx);
+	void exitYuyu(frameParser.YuyuContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code compare}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterCompare(frameParser.CompareContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code compare}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitCompare(frameParser.CompareContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code other}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterOther(frameParser.OtherContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code other}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitOther(frameParser.OtherContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code huo}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterHuo(frameParser.HuoContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code huo}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitHuo(frameParser.HuoContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code ifyuju}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterIfyuju(frameParser.IfyujuContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code ifyuju}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitIfyuju(frameParser.IfyujuContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code bracketsquare}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterBracketsquare(frameParser.BracketsquareContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code bracketsquare}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitBracketsquare(frameParser.BracketsquareContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code addsub}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterAddsub(frameParser.AddsubContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code addsub}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitAddsub(frameParser.AddsubContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code mulity}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterMulity(frameParser.MulityContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code mulity}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitMulity(frameParser.MulityContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code doubleback}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterDoubleback(frameParser.DoublebackContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code doubleback}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitDoubleback(frameParser.DoublebackContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code fei}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterFei(frameParser.FeiContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code fei}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitFei(frameParser.FeiContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code doublebefore}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterDoublebefore(frameParser.DoublebeforeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code doublebefore}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitDoublebefore(frameParser.DoublebeforeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code deny2}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterDeny2(frameParser.Deny2Context ctx);
+	/**
+	 * Exit a parse tree produced by the {@code deny2}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitDeny2(frameParser.Deny2Context ctx);
+	/**
+	 * Enter a parse tree produced by the {@code attribute}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterAttribute(frameParser.AttributeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code attribute}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitAttribute(frameParser.AttributeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code yu}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterYu(frameParser.YuContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code yu}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitYu(frameParser.YuContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code huohuo}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterHuohuo(frameParser.HuohuoContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code huohuo}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitHuohuo(frameParser.HuohuoContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code new}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterNew(frameParser.NewContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code new}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitNew(frameParser.NewContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code deny}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterDeny(frameParser.DenyContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code deny}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitDeny(frameParser.DenyContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code complexaddsub}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterComplexaddsub(frameParser.ComplexaddsubContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code complexaddsub}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitComplexaddsub(frameParser.ComplexaddsubContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code yidong}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterYidong(frameParser.YidongContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code yidong}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitYidong(frameParser.YidongContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code compare1}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterCompare1(frameParser.Compare1Context ctx);
+	/**
+	 * Exit a parse tree produced by the {@code compare1}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitCompare1(frameParser.Compare1Context ctx);
+	/**
+	 * Enter a parse tree produced by the {@code special}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterSpecial(frameParser.SpecialContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code special}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitSpecial(frameParser.SpecialContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code bracketcircle}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterBracketcircle(frameParser.BracketcircleContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code bracketcircle}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitBracketcircle(frameParser.BracketcircleContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code circle}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterCircle(frameParser.CircleContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code circle}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitCircle(frameParser.CircleContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code primary}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterPrimary(frameParser.PrimaryContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code primary}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitPrimary(frameParser.PrimaryContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code chengcheng}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterChengcheng(frameParser.ChengchengContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code chengcheng}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitChengcheng(frameParser.ChengchengContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link frameParser#primaryExpression}.
 	 * @param ctx the parse tree

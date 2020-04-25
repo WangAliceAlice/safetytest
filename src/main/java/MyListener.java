@@ -25,9 +25,10 @@ public class MyListener  extends BaseErrorListener{
                             RecognitionException e)
     {
         this.hasError=true;
-        System.err.println("line ddd"+line+":"+charPositionInLine+" "+msg);
+        System.err.println("line:"+line+":"+charPositionInLine+" "+msg);
         underlineError(recognizer,(Token)offendingSymbol,
                 line, charPositionInLine);
+
     }
     protected void underlineError(Recognizer<?, ?> recognizer,
 

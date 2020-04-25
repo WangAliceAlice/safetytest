@@ -340,11 +340,180 @@ public interface frameVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitElementaryTypeName(frameParser.ElementaryTypeNameContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link frameParser#expression}.
+	 * Visit a parse tree produced by the {@code yuyu}
+	 * labeled alternative in {@link frameParser#expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitExpression(frameParser.ExpressionContext ctx);
+	T visitYuyu(frameParser.YuyuContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code compare}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCompare(frameParser.CompareContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code other}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitOther(frameParser.OtherContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code huo}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitHuo(frameParser.HuoContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ifyuju}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIfyuju(frameParser.IfyujuContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code bracketsquare}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBracketsquare(frameParser.BracketsquareContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code addsub}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAddsub(frameParser.AddsubContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code mulity}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitMulity(frameParser.MulityContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code doubleback}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDoubleback(frameParser.DoublebackContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code fei}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFei(frameParser.FeiContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code doublebefore}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDoublebefore(frameParser.DoublebeforeContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code deny2}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDeny2(frameParser.Deny2Context ctx);
+	/**
+	 * Visit a parse tree produced by the {@code attribute}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAttribute(frameParser.AttributeContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code yu}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitYu(frameParser.YuContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code huohuo}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitHuohuo(frameParser.HuohuoContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code new}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNew(frameParser.NewContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code deny}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDeny(frameParser.DenyContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code complexaddsub}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitComplexaddsub(frameParser.ComplexaddsubContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code yidong}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitYidong(frameParser.YidongContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code compare1}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCompare1(frameParser.Compare1Context ctx);
+	/**
+	 * Visit a parse tree produced by the {@code special}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSpecial(frameParser.SpecialContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code bracketcircle}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBracketcircle(frameParser.BracketcircleContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code circle}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCircle(frameParser.CircleContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code primary}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitPrimary(frameParser.PrimaryContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code chengcheng}
+	 * labeled alternative in {@link frameParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitChengcheng(frameParser.ChengchengContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link frameParser#primaryExpression}.
 	 * @param ctx the parse tree

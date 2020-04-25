@@ -212,32 +212,33 @@ Fixed
 Ufixed
   : 'ufixed' | ( 'ufixed' [0-9]+ 'x' [0-9]+ ) ;
 
+
 expression
-  : expression ('++' | '--')
-  | 'new' typeName
-  | expression '[' expression ']'
-  | expression '(' functionCallArguments ')'
-  | expression '.' identifier
-  | '(' expression ')'
-  | ('++' | '--') expression
-  | ('+' | '-') expression
-  | ('after' | 'delete') expression
-  | '!' expression
-  | '~' expression
-  | expression '**' expression
-  | expression ('*' | '/' | '%') expression
-  | expression ('+' | '-') expression
-  | expression ('<<' | '>>') expression
-  | expression '&' expression
-  | expression '^' expression
-  | expression '|' expression
-  | expression ('<' | '>' | '<=' | '>=') expression
-  | expression ('==' | '!=') expression
-  | expression '&&' expression
-  | expression '||' expression
-  | expression '?' expression ':' expression
-  | expression ('=' | '|=' | '^=' | '&=' | '<<=' | '>>=' | '+=' | '-=' | '*=' | '/=' | '%=') expression
-  | primaryExpression ;
+  : expression ('++' | '--') #doubleback
+  | 'new' typeName #new
+  | expression '[' expression ']' #bracketsquare
+  | expression '(' functionCallArguments ')'#bracketcircle
+  | expression '.' identifier #attribute
+  | '(' expression ')' #circle
+  | ('++' | '--') expression  #doublebefore
+  | ('+' | '-') expression #addsub
+  | ('after' | 'delete') expression #special
+  | '!' expression #deny
+  | '~' expression #deny2
+  | expression '**' expression #chengcheng
+  | expression (MULTIPLY | DIVIDE | '%') expression #mulity
+  | expression (PLUS | MINUS) expression #complexaddsub
+  | expression ('<<' | '>>') expression #yidong
+  | expression '&' expression #yu
+  | expression '^' expression #fei
+  | expression '|' expression #huo
+  | expression ('<' | '>' | '<=' | '>=') expression #compare
+  | expression ('==' | '!=') expression #compare1
+  | expression '&&' expression # yuyu
+  | expression '||' expression #huohuo
+  | expression '?' expression ':' expression #ifyuju
+  | expression ('=' | '|=' | '^=' | '&=' | '<<=' | '>>=' | '+=' | '-=' | '*=' | '/=' | '%=') expression #other
+  | primaryExpression  # primary;
 
 primaryExpression
   : BooleanLiteral
@@ -430,6 +431,19 @@ DoubleQuotedStringCharacter
 fragment
 SingleQuotedStringCharacter
   : ~['\r\n\\] | ('\\' .) ;
+
+PLUS
+: '+';
+
+MINUS
+: '-';
+
+MULTIPLY
+: '*';
+
+DIVIDE
+: '/';
+
 WS
   : [ \t\r\n\u000C]+ -> skip ;
 COMMENT
