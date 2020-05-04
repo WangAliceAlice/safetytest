@@ -7,7 +7,7 @@ public class ReentryVisitor extends frameBaseVisitor {
        {
            if(ctx.statement(0).getText().contains("balance"))
            {
-               System.out.println(ctx.statement(0).getText());
+               //System.out.println(ctx.statement(0).getText());
                System.out.println("存在重入漏洞");
            }
        }

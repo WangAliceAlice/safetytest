@@ -29,7 +29,7 @@ public class grammertest {
     @Test
     public void testComentsGrammar()  {
 
-        String result = getFile("reentry.sol");
+        String result = getFile("overflow.sol");
 
 
         ANTLRInputStream input = new ANTLRInputStream(result);
