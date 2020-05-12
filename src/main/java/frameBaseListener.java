@@ -507,6 +507,42 @@ public class frameBaseListener implements frameListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	 public void enterRequireStatement(frameParser.RequireStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	 public void exitRequireStatement(frameParser.RequireStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	 public void enterAssertStatement(frameParser.AssertStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	 public void exitAssertStatement(frameParser.AssertStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	 public void enterRevertStatement(frameParser.RevertStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	 public void exitRevertStatement(frameParser.RevertStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	 public void enterWhileStatement(frameParser.WhileStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}

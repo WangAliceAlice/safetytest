@@ -417,6 +417,36 @@ public interface frameListener extends ParseTreeListener {
 	 */
 	void exitIfStatement(frameParser.IfStatementContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link frameParser#requireStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterRequireStatement(frameParser.RequireStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link frameParser#requireStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitRequireStatement(frameParser.RequireStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link frameParser#assertStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssertStatement(frameParser.AssertStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link frameParser#assertStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssertStatement(frameParser.AssertStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link frameParser#revertStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterRevertStatement(frameParser.RevertStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link frameParser#revertStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitRevertStatement(frameParser.RevertStatementContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link frameParser#whileStatement}.
 	 * @param ctx the parse tree
 	 */

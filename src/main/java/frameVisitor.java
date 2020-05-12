@@ -256,6 +256,24 @@ public interface frameVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitIfStatement(frameParser.IfStatementContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link frameParser#requireStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitRequireStatement(frameParser.RequireStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link frameParser#assertStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAssertStatement(frameParser.AssertStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link frameParser#revertStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitRevertStatement(frameParser.RevertStatementContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link frameParser#whileStatement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
