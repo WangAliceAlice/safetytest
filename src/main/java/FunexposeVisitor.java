@@ -1,5 +1,5 @@
 public class FunexposeVisitor extends frameBaseVisitor {
-
+//特权功能暴露
     @Override
     public Integer visitFunctionDefinition(frameParser.FunctionDefinitionContext ctx) {
         String s =ctx.modifierList().getText();

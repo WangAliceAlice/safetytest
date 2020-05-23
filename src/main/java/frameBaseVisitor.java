@@ -1,6 +1,8 @@
 // Generated from C:/Users/wanga/IdeaProjects/safetytest/src\frame.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
+import java.io.IOException;
+
 /**
  * This class provides an empty implementation of {@link frameVisitor},
  * which can be extended to create a visitor which only needs to handle a subset
@@ -142,7 +144,7 @@ public class frameBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements 
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	 public T visitFunctionDefinition(frameParser.FunctionDefinitionContext ctx) { return visitChildren(ctx); }
+	 public T visitFunctionDefinition(frameParser.FunctionDefinitionContext ctx)  { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
