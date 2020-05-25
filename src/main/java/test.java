@@ -32,7 +32,7 @@ public class test {
 
     public static void main(String[] args) throws Exception {
         // create a CharStream that reads from standard input
-        ANTLRInputStream input = new ANTLRInputStream(test.getFile("txorigin.sol"));
+        ANTLRInputStream input = new ANTLRInputStream(test.getFile("overflow.sol"));
         // create a lexer that feeds off of input CharStream
         frameLexer lexer = new frameLexer(input);
         // create a buffer of tokens pulled from the lexer

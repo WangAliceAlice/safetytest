@@ -474,7 +474,7 @@ expression
 
   | expression '?' expression ':' expression #ifyuju
 
-  | expression ('=' | '|=' | '^=' | '&=' | '<<=' | '>>=' | '+=' | '-=' | '*=' | '/=' | '%=') expression #other
+  | expression ('=' | '|=' | '^=' | '&=' | '<<=' | '>>=' | PLUSEQUAL | MINUSEQUAL | '*=' | '/=' | '%=') expression #other
 
   | primaryExpression  # primary;
 
@@ -886,7 +886,11 @@ DIVIDE
 
 : '/';
 
+PLUSEQUAL
+:'+=';
 
+MINUSEQUAL
+:'-=';
 
 WS
 

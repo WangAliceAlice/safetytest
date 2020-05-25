@@ -1,8 +1,6 @@
 // Generated from C:/Users/wanga/IdeaProjects/safetytest/src\frame.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
-import java.io.IOException;
-
 /**
  * This interface defines a complete generic visitor for a parse tree produced
  * by {@link frameParser}.
@@ -124,7 +122,7 @@ public interface frameVisitor<T> extends ParseTreeVisitor<T> {
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFunctionDefinition(frameParser.FunctionDefinitionContext ctx) ;
+	T visitFunctionDefinition(frameParser.FunctionDefinitionContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link frameParser#returnParameters}.
 	 * @param ctx the parse tree

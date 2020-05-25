@@ -10,9 +10,10 @@ contract SimpleAuction{
     event AuchtionEnded(address winner,uint amount);
 
     function SimpleAuction(uint _biddingTime,address _beneficiary){
-        beneficiary =_beneficiary;
+        beneficiary = _beneficiary;
         auctionEnd = now+_biddingTime;
     }
+
     function bid()payable{
         require(now <=auctionEnd);
 
@@ -20,6 +21,7 @@ contract SimpleAuction{
         if(highestBidder !=0){
             pendingReturns[highestBidder]+=highestBid;
         }
+        require(highestBidder.send(highestBid));
         highestBidder = msg.sender;
         highestBid = msg.value;
         HighestBidIncreased(msg.sender,msg.value);

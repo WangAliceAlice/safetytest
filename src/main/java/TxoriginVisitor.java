@@ -1,8 +1,8 @@
 public class TxoriginVisitor extends frameBaseVisitor {
 
     @Override
-    public Integer visitFunctionCallArguments(frameParser.FunctionCallArgumentsContext ctx) {
-        String string = ctx.expressionList().getText();
+    public Integer visitFunctionDefinition(frameParser.FunctionDefinitionContext ctx) {
+        String string = ctx.block().getText();
         if(string.contains("tx.origin"))
         {
             System.out.println();

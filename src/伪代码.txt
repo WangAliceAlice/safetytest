@@ -1,0 +1,23 @@
+
+A+B
+Input:smart contract
+if (importDirective doesn't contains SafeMath)
+{
+     Output:Don't use SafeMath;
+}
+for(stateVariableDeclaration in ParseTree)
+{
+     store HashMap(identifier,value);
+     get TypeName;
+     store identifer's bytes;
+
+}
+for(Complexaddsub in ParseTree)
+{
+    compute A + B;
+    result = (A+B)%bytes
+    if(result<A||result<B)
+    {
+       Output:overflow
+    }
+}
