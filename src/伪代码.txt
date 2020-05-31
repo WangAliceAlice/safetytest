@@ -1,3 +1,61 @@
+Begin（算法开始）
+输入 A，B，C
+IF A>B 则 A→Max
+否则 B→Max
+IF C>Max 则 C→Max
+Print Max
+End （算法结束）
+
+
+Begin
+输入 z=x+y
+IF z<=x 或 z<=y
+则 加法运算溢出
+Print 整型溢出漏洞
+End
+
+
+Begin
+输入 智能合约
+IF 智能合约在写操作函数之后存在更新状态的操作
+则 智能合约存在重入漏洞
+Print 重入漏洞
+End、
+
+Begin
+输入 智能合约
+IF 智能合约中敏感操作函数没有权限修饰符
+则 智能合约存在特权功能暴露漏洞
+Print 特权功能暴露漏洞
+End
+
+Begin
+输入 智能合约
+IF 智能合约中使用call(),delegatecall(),callcode()调用其他合约
+则 智能合约存在跨合约调用漏洞
+Print 跨合约调用漏洞
+End
+
+Begin
+输入 智能合约
+IF 智能合约判断语句中包含内容为循环调用的函数 或 智能合约判断语句中涉及到send()转账操作
+则 智能合约存在拒绝服务漏洞
+Print 拒绝服务漏洞
+End
+
+Begin
+输入 智能合约地址
+IF 地址不够20字节
+则 智能合约存在短地址攻击漏洞
+Print 短地址攻击漏洞
+End
+
+Begin
+输入 智能合约
+IF 智能合约使用了tx.origin变量
+则 智能合约存在tx.origin漏洞
+Print tx.origin漏洞
+End
 
 A+B
 Input:smart contract
